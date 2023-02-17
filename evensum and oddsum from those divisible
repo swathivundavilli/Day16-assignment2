@@ -1,0 +1,29 @@
+#include <stdio.h>
+int main()
+{
+    int n, k, i, evenSum = 0, oddSum = 0;
+    printf("Enter value of n: ");
+    scanf("%d", &n);
+    printf("Enter value of k: ");
+    scanf("%d", &k);
+    printf("Numbers divisible by %d from 1 to %d: ", k, n);
+    for (i = 1; i <= n; i++)
+    {
+        if (i % k == 0)
+        {
+            printf("%d ", i);
+            if (i % 2 == 0)
+            {
+                evenSum += i;
+            }
+            else
+            {
+                oddSum += i;
+            }
+        }
+    }
+    printf("\n");
+    printf("Sum of even numbers: %d\n", evenSum);
+    printf("Sum of odd numbers: %d\n", oddSum);
+    return 0;
+}
